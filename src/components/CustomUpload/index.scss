@@ -1,0 +1,20 @@
+@import '@/styles/common.scss';
+
+.avatarUploader {
+  :global {
+    .ant-upload {
+      width: rem(350);
+      height: rem(200);
+    }
+  }
+
+  svg {
+    width: rem(48);
+    height: rem(48);
+  }
+
+  img {
+    width: rem(350);
+    height: rem(200);
+  }
+}

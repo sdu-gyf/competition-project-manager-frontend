@@ -1,0 +1,50 @@
+@import '@/styles/common.scss';
+
+.logo {
+  height: 64px;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header {
+  background: $white;
+  padding: 0 rem(20);
+  height: rem(64);
+  line-height: rem(64);
+  display: flex;
+  justify-content: space-between;
+}
+.content {
+  background: $white;
+  margin: rem(20);
+  padding: rem(20);
+  padding-top: 0;
+  height: 100%;
+  overflow-y: auto;
+
+  :global {
+    .ant-tabs {
+      width: 100%;
+    }
+    .ant-tabs-bar {
+      margin-bottom: 0;
+    }
+  }
+}
+.nav {
+  margin: rem(20);
+  margin-bottom: 0;
+  padding: 0 rem(20);
+  display: flex;
+  align-items: center;
+  height: rem(64);
+  line-height: rem(64);
+}
+.title {
+  display: flex;
+  align-items: center;
+}
+.ant-layout-header {
+  background: white;
+}

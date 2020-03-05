@@ -1,0 +1,5 @@
+$basePixel: 16;
+
+@function rem($px) {
+  @return $px / $basePixel * 1rem;
+}

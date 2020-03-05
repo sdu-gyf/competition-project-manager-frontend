@@ -1,0 +1,26 @@
+{
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": [
+      "mock/**/*.(j|t)s",
+      "node_modules/**/*.(j|t)s",
+      ".umi/**/*.(j|t)s"
+    ]
+  },
+  "rules": {
+    "member-access": false,
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "jsx-no-lambda": false,
+    "interface-name" : [true, "never-prefix"],
+    "no-console": {
+      "options": [
+        "debug",
+        "info",
+        "trace"
+      ]
+    },
+    "no-empty-interface": false,
+    "no-unused-variable": false
+  }
+}

@@ -1,0 +1,23 @@
+@import '@/styles/common.scss';
+.imageUploader {
+  :global {
+    .ant-upload {
+      width: rem(200);
+      height: rem(130);
+    }
+    .ant-upload-list-item{
+      width: rem(200);
+      height: rem(130); 
+    }
+  }
+
+  svg {
+    width: rem(24);
+    height: rem(24);
+  }
+
+  img {
+    width: rem(200);
+    height: rem(130);
+  }
+}

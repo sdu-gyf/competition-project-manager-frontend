@@ -1,0 +1,15 @@
+@import '@/styles/common.scss';
+
+@include tableFilter;
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  
+    :global {
+      .ant-form-item {
+        width: 50%;
+      }
+    }
+   
+  }

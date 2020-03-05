@@ -1,0 +1,78 @@
+@import './fn.scss';
+
+$white: #fff;
+$primary-color: #1890ff;
+$border-color: #eaedf4;
+$prefix-color: #0189fb;
+@mixin secondaryBtn {
+  color: $primary-color;
+  border-color: $primary-color;
+}
+  
+@mixin tableFilter {
+  .filterPanel {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding-top: rem(15);
+  
+      .filterItem {
+        display: flex;
+        align-items: center;
+        margin-right: rem(10);
+        width: rem(290);
+  
+        .label {
+          min-width: rem(120);
+          text-align: right;
+        }
+        :global {
+          .ant-input,
+          .ant-select {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+  
+  @mixin multilineFilter {
+    .filterPanel {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding-top: rem(15);
+  
+      .filterItem {
+        width: 25%;
+        margin-bottom: 5px;
+  
+        :global {
+          .ant-input, 
+          .ant-select,
+          .ant-calendar-picker {
+            width: 100%;
+          }
+        }
+      }
+      :global {
+        .ant-btn-primary {
+          margin-left: rem(10);
+        }
+      }
+    }
+  }
+
+  @mixin formTitle {
+    .title {
+      height: rem(110);
+      line-height: rem(110);
+      text-align: left;
+  
+      &::before {
+        content: " ";
+        border-left: rem(5) solid $prefix-color;
+        padding-right: rem(10);
+      }
+    }
+  }

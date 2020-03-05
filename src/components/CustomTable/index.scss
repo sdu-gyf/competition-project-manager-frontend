@@ -1,0 +1,28 @@
+@import '@/styles/common.scss';
+
+.customTable {
+  width: 100%;
+
+  .filterWrap {
+    margin-bottom: rem(10);
+  }
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(15);
+
+    .btnWrap {
+      display: flex;
+      .btn {
+        margin-right: rem(20);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.secondary {
+          @include secondaryBtn;
+        }
+      }
+    }
+  }
+}

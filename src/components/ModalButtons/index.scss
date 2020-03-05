@@ -1,0 +1,13 @@
+@import '@/styles/common.scss';
+
+.modalBtnWrap {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+  border-top: 1px solid $border-color;
+  width: 100%;
+
+  .submitBtn {
+    margin-left: rem(60);
+  }
+}

@@ -1,0 +1,75 @@
+@import '~antd/dist/antd.css';
+@import './styles/common.scss';
+
+html,
+body,
+#root {
+  height: 100%;
+
+  .iconfont {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .ant-spin-spinning {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .ant-layout-has-sider {
+    height: 100%;
+  }
+  .ant-menu-sub {
+    box-shadow: none;
+  }
+  .ant-modal-title {
+    text-align: center;
+    font-size: rem(18);
+  }
+  .ant-modal-footer {
+    text-align: center;
+
+    .ant-btn-primary {
+      margin-left: 60px;
+    }
+  }
+  .ant-form-item {
+    .ant-input-number,
+    .ant-input {
+      width: 100%;
+    }
+    .ant-input-number-disabled,
+    .ant-input-disabled,
+    .ant-select-disabled .ant-select-selection {
+      background: #f5f5f5;
+    }
+    .ant-form-item-control {
+      word-break: break-all;
+    }
+  }
+  .ant-table td,
+  .ant-table th {
+    white-space: nowrap;
+  }
+  .ant-tabs-content {
+    padding-top: rem(15);
+  }
+}
+
+body {
+  margin: 0;
+}
+
+ol,
+ul,
+dl {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}

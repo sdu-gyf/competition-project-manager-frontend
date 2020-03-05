@@ -1,0 +1,91 @@
+@import '@/styles/common.scss';
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  :global {
+    .ant-input {
+      height: rem(40);
+    }
+    .ant-btn {
+      height: rem(40);
+      font-size: rem(17);
+    }
+  }
+}
+
+.card {
+  display: flex;
+  width: rem(1200);
+  flex-direction: row;
+  border-radius: 4px;
+  box-shadow: -13px 0px 40px 0px rgba(21,86,178,0.22);
+  overflow: hidden;
+}
+
+.card-left {
+  padding: rem(30);
+  width: 50%;
+  background-color: rgba(255, 255, 255, .6);
+}
+
+.left-col-1 {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  margin-right: rem(20);
+  width: rem(40);
+  height: rem(40);
+  user-select: none;
+}
+.title-main {
+  margin: 0;
+  font-size: 25px;
+}
+
+.left-col-2 {
+  position: relative;
+  margin: rem(50) rem(30);
+  // 添加遮罩 防止用户右键保存图片
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.illustrated {
+  width: 100%;
+  user-select: none;
+}
+
+.card-right {
+  padding: rem(50) rem(70);
+  width: 50%;
+  background-color: $white;
+}
+
+.title-right {
+  margin-bottom: rem(50);
+  font: {
+    size: 20px;
+    weight: bold;
+  }
+}
+
+.form-btn {
+  margin-top: rem(40);
+  text-align: right;
+
+  .btn-submit {
+    margin: 0;
+    width: 80%;
+  }
+}
