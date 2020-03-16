@@ -20,7 +20,7 @@ import { DepartmentService } from '@/services/department.service';
 import SearchFilter from './SearchFilter';
 import Loading from '@/components/Loading';
 import { Button, Divider, Modal } from 'antd';
-import DepartmentForm from './DepartmentForm';
+import DepartmentForm from './TeamForm';
 import { ButtonItem } from '@/interfaces/component';
 const CommonModal = React.lazy(() => import('@/components/CommonModal'));
 

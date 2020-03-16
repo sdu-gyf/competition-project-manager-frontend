@@ -32,6 +32,12 @@ export default [
     routes: [{ path: '/reservation/log', component: './reservation/reservationList' }],
   },
   {
+    path: '/team',
+    component: '../layouts/BasicLayout',
+    Routes: ['src/components/Authorized'], // 所有的子路径都会被这个拦截
+    routes: [{ path: '/team/list', component: './team/list' }],
+  },
+  {
     path: '/',
     component: '../layouts/BasicLayout',
     Routes: ['src/components/Authorized'], // 所有的子路径都会被这个拦截

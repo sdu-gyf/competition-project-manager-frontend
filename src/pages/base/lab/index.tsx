@@ -21,9 +21,10 @@ import { LabService } from '@/services/lab.service';
 import SearchFilter from './SearchFilter';
 import Loading from '@/components/Loading';
 import { Divider, Modal } from 'antd';
-const CommonModal = React.lazy(() => import('@/components/CommonModal'));
 import LabForm from './LabForm';
 import { ButtonItem } from '@/interfaces/component';
+const CommonModal = React.lazy(() => import('@/components/CommonModal'));
+
 
 export interface LabPageProps {
   labService: LabService;

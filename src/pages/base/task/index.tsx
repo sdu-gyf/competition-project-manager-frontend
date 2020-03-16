@@ -17,13 +17,13 @@ import {
 } from '@/interfaces/lab';
 import CustomTable from '@/components/CustomTable';
 import { compose, withState } from 'recompose';
-import { TaskService } from '@/services/task.service';
 import SearchFilter from './SearchFilter';
 import Loading from '@/components/Loading';
 import { Divider, Modal } from 'antd';
-const CommonModal = React.lazy(() => import('@/components/CommonModal'));
-import TaskForm from './TaskForm';
 import { ButtonItem } from '@/interfaces/component';
+import { LabService } from '@/services/lab.service';
+const CommonModal = React.lazy(() => import('@/components/CommonModal'));
+
 
 export interface LabPageProps {
   labService: LabService;
@@ -154,6 +154,7 @@ class LabPage extends React.Component<LabPageProps> {
             visible={this.props.visible}
             setVisible={this.props.setVisible}
           >
+            {/* eslint-disable-next-line react/jsx-no-undef */}
             <LabsForm
               saving={loading}
               detailData={this.props.lab}

@@ -1,4 +1,3 @@
-import { WrappedFormUtils } from 'antd/lib/form/Form';
 import reg from './regex-utils';
 
 /**

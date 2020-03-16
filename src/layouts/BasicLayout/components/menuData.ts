@@ -56,6 +56,19 @@ const userResourceList = [
     ],
   },
   {
+    resourceKey: 'team',
+    apiUrl: '',
+    icon: 'icon-base',
+    description: '比赛队伍管理',
+    children: [
+      {
+        resourceKey: 'list',
+        apiUrl: '/team/list',
+        description: '比赛队伍列表',
+      }
+    ],
+  },
+  {
     resourceKey: 'spider',
     apiUrl: '',
     icon: 'icon-ruku',
