@@ -10,6 +10,7 @@ import { message } from 'antd';
 import { OptionItem } from '@/interfaces/component';
 import lscache from 'lscache';
 
+// export const BACKEND_URL = 'http://49.234.60.116:8080';
 export const BACKEND_URL = 'http://127.0.0.1:8080';
 // export const BACKEND_URL = '';
 

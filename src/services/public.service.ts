@@ -32,6 +32,7 @@ export class PublicService {
     }
   }
 
+  // 登陆
   @action
   public async login(userId: string, password: string): Promise<boolean> {
     try {

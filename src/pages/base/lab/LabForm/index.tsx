@@ -133,7 +133,7 @@ class LabForm extends React.PureComponent<UserFormProps> {
   }
 
   private handleSubmit = () => {
-    this.props.form.validateFields({ force: true }, (error: Error, values: LabEditModel) => {
+    this.props.form.validateFields({ force: true }, (error: Error) => {
       if (error) {
         return;
       }

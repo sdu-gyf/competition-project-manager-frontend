@@ -16,7 +16,9 @@ export interface HomepageProps {
 
 class Upload extends React.Component<HomepageProps> {
   public render() {
-    return <div>Hello</div>;
+    return    <div>
+      Hello
+    </div>;
   }
 }
 

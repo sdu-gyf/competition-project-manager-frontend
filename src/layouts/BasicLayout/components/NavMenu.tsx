@@ -12,7 +12,6 @@ import { Menu } from 'antd';
 import { isEmpty } from 'lodash';
 import { compose } from 'recompose';
 import { PageMatchModel, CustomLocation } from '@/interfaces/component';
-import Iconfont from '@/components/Iconfont';
 import styles from '../index.scss';
 import { MenuResourceModel } from '@/interfaces/home';
 import { PublicService } from '@/services/public.service';
@@ -88,7 +87,6 @@ class NavMenu extends React.Component<NavMenuProps> {
                 key={item.resourceKey}
                 title={
                   <span className={styles.title}>
-                    <Iconfont name={item.icon} />
                     {item.description}
                   </span>
                 }
@@ -98,13 +96,11 @@ class NavMenu extends React.Component<NavMenuProps> {
                     {ele.apiUrl ? (
                       <Link to={ele.apiUrl}>
                         <span className={styles.title}>
-                          <Iconfont name={ele.icon} />
                           {ele.description}
                         </span>
                       </Link>
                     ) : (
                       <span className={styles.title}>
-                        <Iconfont name={ele.icon} />
                         {ele.description}
                       </span>
                     )}
@@ -118,13 +114,11 @@ class NavMenu extends React.Component<NavMenuProps> {
               {item.apiUrl ? (
                 <Link to={item.apiUrl}>
                   <span className={styles.title}>
-                    <Iconfont name={item.icon} />
                     {item.description}
                   </span>
                 </Link>
               ) : (
                 <span className={styles.title}>
-                  <Iconfont name={item.icon} />
                   {item.description}
                 </span>
               )}
