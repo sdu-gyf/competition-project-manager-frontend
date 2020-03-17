@@ -15,6 +15,8 @@ export default {
   '/base/upload': '上传管理',
   '/base/images': '图片管理',
   '/base/search': '图片搜索',
+  '/team': '队伍队伍管理',
+  '/team/list': '比赛队伍列表',
 
   '/spider': '数据采集',
   '/spider/log': '采集历史',

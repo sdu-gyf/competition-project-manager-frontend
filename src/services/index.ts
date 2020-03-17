@@ -10,9 +10,11 @@
 import { PublicService } from './public.service';
 import { DepartmentService } from './department.service';
 import { LabService } from './lab.service';
+import { TeamService } from '@/services/team.service';
 
 export default {
   publicService: new PublicService(),
   departmentService: new DepartmentService(),
   labService: new LabService(),
+  teamService: new TeamService(),
 };

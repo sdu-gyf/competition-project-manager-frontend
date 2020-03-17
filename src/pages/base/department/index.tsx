@@ -110,7 +110,6 @@ class DepartmentPage extends React.Component<DepartmentPageProps> {
 
     return (
       <>
-        <Button>hello world</Button>
         <CustomTable
           loading={loading}
           columns={this.columns}

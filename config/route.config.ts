@@ -21,8 +21,7 @@ export default [
     Routes: ['src/components/Authorized'], // 所有的子路径都会被这个拦截
     routes: [
       { path: '/base/department', component: './base/department' },
-      { path: '/base/lab', component: './base/lab' },
-      { path: '/base/task', component: './base/task' },
+      { path: '/base/lab', component: './base/lab' }
     ],
   },
   {
