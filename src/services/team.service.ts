@@ -24,9 +24,18 @@ export class TeamService {
     this.store.loading = true;
     this.store.pageData = initalPaginationValue;
     try {
-      const result = await this.http.postJSON<Pagination<TeamModel>>(
+      const result = await this.http.get<Pagination<TeamModel>>(
         `${BACKEND_URL}/team/list`,
-        searchProps,
+        {
+          params:{
+            teamName:searchProps.teamName||null,
+            province:searchProps.province||null,
+            contact:searchProps.contact||null,
+            page:searchProps.page,
+            pageSize:searchProps.pageSize,
+            status:searchProps.status||null
+          }
+        }
       );
       this.store.loading = false;
       if (result.success) {

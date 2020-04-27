@@ -45,6 +45,7 @@ export interface TeamSearchProps {
   contact?: string;
   page?: number;
   pageSize?: number;
+  status?:number;
 }
 
 export const defaultTeamSearchProps: TeamSearchProps = {

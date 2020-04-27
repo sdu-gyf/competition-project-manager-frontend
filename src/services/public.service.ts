@@ -52,6 +52,27 @@ export class PublicService {
       return false;
     }
   }
+  
+  // github登陆
+  @action
+  public async githubLogin(code:string): Promise<boolean> {
+    try{
+        const result = await this.http.get<UserTokenInfo>(`${BACKEND_URL}/system/callback`,{
+          params:{ code },
+        });
+        if (result.success) {
+          user.saveToken(result.data.accessToken);
+          user.saveUserInfo(result.data.userName,result.data.userName,result.data.avatarUrl);
+          return true;
+        } else {
+          messageFail(result.message);
+          return false;
+        } 
+      }catch (error) {
+        messageFail();
+        return false;
+    }
+  }
 
   @action
   public setMenuKeys(selectedKeys: any, openKeys: any) {

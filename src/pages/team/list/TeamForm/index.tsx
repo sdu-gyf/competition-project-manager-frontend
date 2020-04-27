@@ -64,7 +64,12 @@ class UserForm extends React.PureComponent<UserFormProps> {
               {
                 required: true,
                 message: '请输入联系电话',
+                
               },
+              {
+                pattern:/^0?(13[0-9]|15[012356789]|17[013678]|18[0-9]|14[57])[0-9]{8}$/,
+                message:"请输入正确电话"
+              }
             ],
           })(<Input placeholder="请输入" />)}
         </Form.Item>
@@ -75,7 +80,7 @@ class UserForm extends React.PureComponent<UserFormProps> {
               {
                 required: true,
                 message: '请输入所在省份',
-              },
+              }
             ],
           })(<Input placeholder="请输入" />)}
         </Form.Item>

@@ -13,8 +13,8 @@ const FormItem = Form.Item;
 
 export default class SearchFilter extends React.PureComponent<SearchFilterProps> {
 
-
   render() {
+
     const { onSearch, changeSearchProps } = this.props;
     return (
       <Form layout="inline" className={styles.filterPanel}>
