@@ -52,4 +52,14 @@ export const ONE_COLUMN_FORM_LAYOUT = Object.freeze({
   },
 });
 
+export const  GITHUB_CONFIG = {
+  "github":{
+      'oauth_uri': 'https://github.com/login/oauth/authorize',
+      'redirect_uri': 'http://localhost:8000/callback',
+      'client_id': 'ce7fc00c2f94eb750aca',
+      'client_secret': 'aa6030340e20920d6ecabfc3612f3d609bb028f4',
+      'status':"1"
+  }
+};
+
 export const SOME_CONSTANT = 1;

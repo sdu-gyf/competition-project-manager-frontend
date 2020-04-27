@@ -34,4 +34,5 @@ export interface UserTokenInfo {
   accessToken: string;
   userName: string;
   resourceKeys: string[];
+  avatarUrl:string;
 }

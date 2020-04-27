@@ -16,6 +16,9 @@ import router, { RouteData } from 'umi/router';
 import lscache from 'lscache';
 import { FILTER_FORM_LAYOUT } from '@/constant';
 import { withState, compose } from 'recompose';
+import { GITHUB_CONFIG } from "./../../constant"
+import querystring from 'querystring'
+import {EventEmitter} from 'events';
 
 interface LoginProps extends FormComponentProps {
   location: RouteData;
@@ -27,9 +30,37 @@ interface LoginProps extends FormComponentProps {
 @inject('publicService')
 @observer
 class LoginPage extends Component<LoginProps> {
+
   public state = {
     savePassword: false,
   };
+
+  githubLogin(){
+    let popWin = window.open(`${GITHUB_CONFIG.github.oauth_uri}?client_id=${GITHUB_CONFIG.github.client_id}&redirect_uri=${GITHUB_CONFIG.github.redirect_uri}&scope=user`,
+                 null, "width=600,height=400")
+
+    let code 
+    let eventEmitter = new EventEmitter();
+
+    let checkCode = () => {
+      try { 
+        let query = popWin.location.search.substring(1)
+        code = querystring.parse(query).code
+
+        if((typeof code)!=='undefined'){
+          clearInterval(intervalId)
+          popWin.close()
+          eventEmitter.emit('code', code);
+        }
+      } catch (err){}
+    }
+
+    let intervalId = setInterval(checkCode, 1000);
+    eventEmitter.on('code', (code: string) => {
+      console.log('get code:' + code)
+      this.handleGithubLogin(code);
+    }); 
+  }
 
   public componentDidMount() {
     this.getLoginFormValues();
@@ -77,6 +108,13 @@ class LoginPage extends Component<LoginProps> {
                   登录
                 </Button>
               </Form.Item>
+              <Form.Item>
+                <Button
+                  onClick={this.githubLogin.bind(this)}
+                >
+                  Github登陆
+                </Button>
+              </Form.Item>
             </Form>
           </div>
         </div>
@@ -100,6 +138,14 @@ class LoginPage extends Component<LoginProps> {
     }
     lscache.set('loginFormValues', values);
   };
+
+  private async handleGithubLogin(code:string){
+    const { publicService } = this.props;
+    const res = await publicService.githubLogin(code);
+    if(res){
+      this.submitCallback();
+    }
+  }
 
   private handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
