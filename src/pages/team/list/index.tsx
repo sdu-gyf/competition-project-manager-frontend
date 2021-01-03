@@ -23,6 +23,7 @@ export interface TeamPageProps {
   selectRow: (selectedRowKeys: string[]) => void;
 
   searchProps: TeamSearchProps;
+  preProps: TeamSearchProps;
   setSearchProps: (searchProps: TeamSearchProps) => void;
 
   team?: TeamEditModel;
@@ -131,8 +132,10 @@ class TeamPage extends React.Component<TeamPageProps> {
           <SearchFilter
             searchProps={this.props.searchProps}
             changeSearchProps={props => {
+              const preProps = this.props.searchProps;
               this.props.setSearchProps({
                 ...this.props.setSearchProps,
+                ...preProps,
                 ...props,
               });
             }}

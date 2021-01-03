@@ -33,7 +33,7 @@ export default class SearchFilter extends React.PureComponent<SearchFilterProps>
           <div className={styles.filterItem}>
             <span className={styles.label}>联系人：</span>
             <Input
-              id = "contact"
+              id = "contact"　
               allowClear={true}
               placeholder="请输入联系人"
               onChange={e => changeSearchProps({ contact: e.target.value })}
